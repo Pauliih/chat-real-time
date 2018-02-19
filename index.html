@@ -26,7 +26,7 @@
   crossorigin="anonymous"></script>
   <script>
     $(function () {
-      var socket = io();
+      var socket = io('http://ec2-34-227-11-223.compute-1.amazonaws.com:3000');
       $('form').submit(function() {
         socket.emit('chat message', $('#m').val());
         $('#m').val('');
